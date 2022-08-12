@@ -47,7 +47,6 @@ class DeliveryTest {
         $x("//*[contains(text(),'Перепланировать')]").click();
         $(byText("Успешно!")).shouldBe(Condition.visible, Duration.ofSeconds(15));
         $("[data-test-id='success-notification'] .notification__content").should(exactText("Встреча успешно запланирована на " + secondMeetingDate));
-
-        }
     }
+}
 
