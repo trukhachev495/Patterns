@@ -36,16 +36,17 @@ public class DataGenerator {
     public static class Registration {
         private Registration() {
         }
-    }
 
-    public static UserInfo generateUser(String locale) {
-        UserInfo userInfo = new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
-        return userInfo;
-    }
-    @Value
-    public static class UserInfo {
-        String city;
-        String name;
-        String phone;
+        public static UserInfo generateUser(String locale) {
+            UserInfo userInfo = new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
+            return userInfo;
+        }
+
+        @Value
+        public static class UserInfo {
+            String city;
+            String name;
+            String phone;
+        }
     }
 }
